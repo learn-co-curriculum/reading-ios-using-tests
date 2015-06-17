@@ -90,6 +90,7 @@ The first `describe` block following the `SpecBegin()` typically contains only t
 
 ```objc
 SpecBegin(FISComment)
+
 describe(@"FISComment", ^{
     // __block variable declarations
     beforeEach(^{
@@ -136,6 +137,7 @@ describe(@"FISComment", ^{
 });
 SpecEnd
 ```
+
 You'll notice that the `FISComment` object and the two strings to be passed into the initializer are declared right at the start and then defined in the `beforeEach` block. The `it` block has been filled out with the Expecta shorthand to check that the properties on the `FISComment` object match the values that were submitted to the initializer in the `beforeEach` block.
 
 #### Interpreting The Expecta Shorthand
