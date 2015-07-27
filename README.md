@@ -46,7 +46,7 @@ Comprehending the content of a test file is a skill in itself. We're going to ru
 
 #### The Import Headers
 
-A `Spec` file begins with import headers just like our Cocoa Touch Classes:
+A `Spec` file begins with import headers just like our `FISAppDelegate` files:
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -63,13 +63,13 @@ You'll notice that the class we're testing, along with any of the classes it dep
 
 The body of the test file is similar to the body of the `*.m` files in your project.
 
-  * The `SpecBegin(<className>)` and `SpecEnd` are wrappers similar to the `@implementation` and `@end` in your class files and the compiler will complain if these are interrupted or missing.
+  * The `SpecBegin(<className>)` and `SpecEnd` are wrappers similar to the `@implementation` and `@end` in the `FISAppDelegate.m` file and the compiler will complain if these are interrupted or missing.
 
   * The `it(NSString *name, ^{ … });` blocks are the actual test containers with a string that describes specifically what the test does.
 
   * The `describe(NSString *name, ^{ … });` blocks are wrappers that prepend a string to the displayed name of all the tests (or `it` blocks) within it. These `name` strings in the `describe` and `it` blocks are used to self-document what each test is intended to check for and what its scope is.
 
-  * The `beforeAll(^{ … });`, `beforeEach(^{ … });`, `afterAll(^{ … });`, and `afterEach(^{ … });` blocks are used for setting up (or resetting) the instance variables to test by and the instances of the test class on which to run the tests. Keep in mind that `beforeAll` and `afterAll` only get dispatched once for all of the tests that they contain, but `beforeEach` and `afterEach` get newly run for every `it` test block.
+  * The `beforeAll(^{ … });`, `beforeEach(^{ … });`, `afterAll(^{ … });`, and `afterEach(^{ … });` blocks are used for setting up (or resetting) the variables to test by and the `FISAppDelegate` variable on which to run the tests. Keep in mind that `beforeAll` and `afterAll` only get dispatched once for all of the tests that they contain, but `beforeEach` and `afterEach` get newly run for every `it` test block.
 
 You'll notice that our labs (in most cases) use `beforeEach` rather than `beforeAll`. This is important because of the asynchronous nature of the tests—there's no set order in which they will run. So, using `beforeEach` will define all of the variables at the beginning of every test `it` block rather than just once for the entire unit test.
  
