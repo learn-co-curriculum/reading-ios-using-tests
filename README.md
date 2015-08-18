@@ -46,7 +46,7 @@ Comprehending the content of a test file is a skill in itself. We're going to ru
 
 #### The Import Headers
 
-A `Spec` file begins with import headers just like our `FISAppDelegate` files:
+A `Spec` file begins with `#import` headers just like our `FISAppDelegate` files:
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -54,16 +54,16 @@ A `Spec` file begins with import headers just like our `FISAppDelegate` files:
 #define EXP_SHORTHAND   // this sets the Expecta shorthand
 #import "Expecta.h"
 
-#import "FISComment.h"  // the name of our class to test
+#import "FISComment.h"  // the name of our file to test
 ```
 
-You'll notice that the class we're testing, along with any of the classes it depends upon, will be included in the `#import` headers. This is so our `Spec` file has access to the class that's it's meant to test and its dependencies.
+You'll notice that the file we're testing will be included in the `#import` headers. This is so our `Spec` file has access to the file that's it's meant to test.
 
 #### Implementation Layout
 
-The body of the test file is similar to the body of the `*.m` files in your project.
+The body of the test file is similar to the body of an implementation (`.m`) file in your project.
 
-  * The `SpecBegin(<className>)` and `SpecEnd` are wrappers similar to the `@implementation` and `@end` in the `FISAppDelegate.m` file and the compiler will complain if these are interrupted or missing.
+  * The `SpecBegin(<className>)` and `SpecEnd` are wrappers that enclose the actual test information in the file and the compiler will complain if these are interrupted or missing.
 
   * The `it(NSString *name, ^{ … });` blocks are the actual test containers with a string that describes specifically what the test does.
 
@@ -146,7 +146,7 @@ The readability of the conditional statements is responsible for much of Expecta
 
   * The conditional will always begin with an `expect(x)` which typically encapsulates the variable being tested. In this case, each of the individual properties of the `FISComment` object are being accessed. 
 
-  * The `.to` is actually just a syntatic sugar that improves readability and acts a placeholder for when the inversion specifier (written as either `.toNot` or `.notTo`) is needed.
+  * The `.to` is actually just a syntactic sugar that improves readability and acts a placeholder for when the inversion specifier (written as either `.toNot` or `.notTo`) is needed.
   
   * The match specifier, in this case `.equal(y)` which encapsulates the variable or value being compared to, and describes the nature of the comparison.
 
