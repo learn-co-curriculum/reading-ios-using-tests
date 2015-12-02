@@ -173,3 +173,5 @@ Tests which pass will conclude with a friendly check-mark inside a green diamond
 When a Specta test fails, a red highlight will appear over the `expect(...)` line followed by a banner that will read out why the test failed. The nature of the discrepancy here can give you valuable insight about how to tweak your code.
 
 *Part of this reading was adapted by Mark Edward Murray from his blog post [Introduction to Specta/Expecta](https://medium.com/@MarkEdwardMurray/introduction-to-specta-expecta-edb20c331226).*
+
+<a href='https://learn.co/lessons/reading-ios-using-tests' data-visibility='hidden'>View this lesson on Learn.co</a>
