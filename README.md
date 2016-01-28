@@ -174,4 +174,4 @@ When a Specta test fails, a red highlight will appear over the `expect(...)` lin
 
 *Part of this reading was adapted by Mark Edward Murray from his blog post [Introduction to Specta/Expecta](https://medium.com/@MarkEdwardMurray/introduction-to-specta-expecta-edb20c331226).*
 
-<a href='https://learn.co/lessons/reading-ios-using-tests' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-using-tests' title='Running Tests'>Running Tests</a> on Learn.co and start learning to code for free.</p>
